@@ -1,0 +1,21 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  margin-left: auto;
+  margin-right: auto;
+  @include breakpoint(tablet) {
+    padding: 32px 39px;
+  }
+  @include breakpoint(desktop) {
+    padding-left: 165px;
+    padding-right: 165px;
+    max-width: 1200px;
+  }
+  @include breakpoint(desktopxl) {
+    max-width: 1440px;
+  }
+}

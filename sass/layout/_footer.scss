@@ -1,0 +1,22 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 43px 16px;
+  background-color: $black;
+  @include breakpoint(tablet) {
+    padding: 50px 32px;
+    @include breakpoint(desktop) {
+      padding-left: 165px;
+      padding-right: 165px;
+    }
+  }
+  &-logo {
+    font-size: 28px;
+  }
+  nav ul {
+    @include list-style();
+  }
+}

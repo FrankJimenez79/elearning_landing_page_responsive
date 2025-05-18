@@ -1,0 +1,48 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+.btn-black {
+  @include buttons();
+  background-color: $black;
+  font-size: 16px;
+  color: $white;
+  font-weight: 700;
+  &:hover {
+    background: var(--666CA3, #666ca3);
+  }
+}
+
+.btn-orange-pink {
+  @include buttons();
+  background-image: $gradient-orange-pink;
+  color: $white;
+  font-weight: 700;
+  font-size: 16px;
+  &:hover {
+    background: var(
+      --Gradient-1-Hover,
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.5) 100%
+      ),
+      linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%)
+    );
+  }
+}
+
+.btn-blue-pink {
+  @include buttons();
+  background-image: $gradient-blue-pink;
+  color: $white;
+  font-weight: 700;
+  font-size: 16px;
+  &:hover {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.5) 100%
+      ),
+      linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
+  }
+}

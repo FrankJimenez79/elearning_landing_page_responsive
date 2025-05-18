@@ -1,0 +1,89 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+.categories {
+  background: linear-gradient(180deg, #fff 0%, #f0f1ff 100%);
+  padding-bottom: 60px;
+  margin-top: 150px;
+  @include breakpoint(desktop) {
+    margin-top: 200px;
+  }
+  @include breakpoint(desktop) {
+    margin-top: 300px;
+  }
+  .container {
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px 40px;
+    }
+    @include breakpoint(desktop) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &-header {
+    background-image: $gradient-orange-pink;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    @include breakpoint(tablet) {
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 26px;
+      color: $white;
+      font-weight: 800;
+      padding: 24px;
+
+      line-height: 32px;
+      @include breakpoint(tablet) {
+        padding-top: 50px;
+      }
+    }
+  }
+  &-article {
+    background-color: $white;
+    border-radius: 10px;
+    padding: 28px;
+    margin-bottom: 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include breakpoint(tablet) {
+      margin-bottom: 0;
+      padding-bottom: 40px;
+    }
+    @include breakpoint(desktop) {
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &-item {
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      top: -40px;
+      left: 25pxpx;
+    }
+    &-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: $black;
+      margin-bottom: 16px;
+    }
+    &-subtitle {
+      font-size: 16px;
+      color: $gray;
+      font-weight: 500;
+      line-height: 26px;
+      margin-bottom: 24px;
+    }
+    &-link {
+      color: $pink;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+}

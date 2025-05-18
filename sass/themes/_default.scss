@@ -1,0 +1,25 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+html * {
+  font-family: $primary-font;
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+
+  @include breakpoint(tablet) {
+    background-image: url("../img/img-tablet.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+  @include breakpoint(desktop) {
+    background-size: 450px;
+    background-position: top -50px right;
+  }
+  @include breakpoint(desktopxl) {
+    background-size: 550px;
+    background-position: top -50px right;
+  }
+}

@@ -1,0 +1,17 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+.principal-header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 40px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    nav ul {
+      @include list-style();
+    }
+  }
+}
